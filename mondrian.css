@@ -1,0 +1,101 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+}
+
+.wide-col {
+	height: 100%;
+	width: 65%;
+	display: flex;
+}
+
+.narrow-col {
+	height: 100%;
+	width: 35%;
+	display: block;
+}
+
+.box {
+	height: 50%;
+	width: 100%;
+}
+	.blue {background-color: blue;}
+	.red {background-color: ADFF2F;}
+	.yellow {background-color: MediumVioletRed;}
+
+/* The @media code is used to direct the modified code on how to respond to different devices*/
+@media only screen and (max-width:625px) {
+	body {
+		width: 100%;
+		height: 100%;
+		display: block; 
+		margin: 0; 
+}
+	.wide-col {
+		height: 50%;
+		width: 100%;
+		display: flex;
+}
+	.narrow-col {
+		height: 50%;
+		width: 100%;
+		display: flex; 
+}
+	.box {
+		height:100%;
+		width: 50%;
+}
+
+	.blue {background-color: blue;}
+	.red {background-color: teal;}
+	.yellow {background-color: violet;}
+
+}
+
+@media only screen and (max-width:400px) {
+	body {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		margin: 0;
+}
+	.wide-col {
+		height: 100%;
+		width: calc(100%/2);
+		display: flex;
+}
+	.narrow-col {
+		height: calc(50% + 50%);
+		width: 50%;
+		display: flex;
+	}
+	
+	.box {
+		height: 100%;
+		width: 50%;
+		display: flex;
+	}
+	
+	.blue {background-color: blue;}
+	.red {background-color: green;}
+	.yellow {background-color: purple;}
+}
+
+/* https://philipwalton.github.io/solved-by-flexbox/demos/vertical-centering/ */
+/* If you're using 'display: flex' this class can be used to easily center horizontally! */
+.center-horizontal {
+	align-items: center;	
+}
+
+/* If you're using 'display: flex' this class can be used to easily center vertically! */
+.center-vertical {
+	justify-content: center;
+}
+
+/* Keep your image from overflowing it's parent DIV */
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
